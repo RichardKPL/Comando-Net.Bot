@@ -1,3 +1,6 @@
-*.env
+# Arquivos de ambiente & TOKEN
+.env
+
+# Arquivos de configuração e dados do bot
 *.json
 *.txt
