@@ -38,6 +38,10 @@ Os módulos gravam configurações e solicitações em arquivos JSON relativos �
 Mantenha a execução na raiz do projeto e faça backup desses arquivos antes de atualizar o bot.
 Não publique `.env`, registros de usuários ou logs contendo dados pessoais.
 
+## Comandos
+
+Consulte a [referência dos comandos](docs/COMANDOS.md) implementados nos módulos.
+
 ## Operação
 
 Consulte [backup, restauração e diagnóstico](docs/OPERACAO.md).
