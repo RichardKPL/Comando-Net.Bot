@@ -58,7 +58,7 @@ from typing import List
 DATA_FILE = "boletim_canais.json"
 
 if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r") as f:
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
         canal_boletim_dict = data.get("boletim", {})
 else:
@@ -66,7 +66,7 @@ else:
 
 def salvar_dados():
     """Salva o dicionário de canais no arquivo JSON."""
-    with open(DATA_FILE, "w") as f:
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump({"boletim": canal_boletim_dict}, f, indent=4)
 
 # --- ESTRUTURA DE DADOS DAS UNIDADES ---
