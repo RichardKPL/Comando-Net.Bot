@@ -12,7 +12,7 @@ print("🔹 Versão do discord.py:", discord.__version__)
 # Carregar .env
 print("🔹 Carregando variáveis de ambiente...")
 load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN", "").strip()
 if not TOKEN:
     print("❌ Erro: DISCORD_TOKEN não encontrado no .env")
     sys.exit(1)
