@@ -1,5 +1,6 @@
 import os
 import sys
+from pathlib import Path
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -37,7 +38,8 @@ def reiniciar_bot():
 # --- Carregar Cogs ---
 async def carregar_cogs():
     print("🔹 Carregando Cogs da pasta comandos...")
-    for arquivo in os.listdir("./comandos"):
+    for caminho in sorted((Path(__file__).resolve().parent / "comandos").glob("*.py")):
+        arquivo = caminho.name
         if arquivo.endswith(".py") and arquivo != "__init__.py":
             cog_name = arquivo[:-3]
             try:
