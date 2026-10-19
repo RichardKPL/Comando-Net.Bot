@@ -9,14 +9,14 @@ from datetime import datetime
 DATA_FILE = "ausencia_canais.json"
 
 if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r") as f:
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
         canal_ausencia_dict = data.get("ausencia", {})
 else:
     canal_ausencia_dict = {}
 
 def salvar_dados():
-    with open(DATA_FILE, "w") as f:
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump({"ausencia": canal_ausencia_dict}, f, indent=4)
 
 # --- Modal Etapa 1 ---
