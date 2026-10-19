@@ -4,3 +4,18 @@
 # Arquivos de configuração e dados do bot
 *.json
 *.txt
+!requirements.txt
+
+# Artefatos locais do Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Variações locais de ambiente
+.env.*
+!.env.example
+
+# Logs locais
+*.log
